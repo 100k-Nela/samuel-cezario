@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Samuel Roger Cezário · Tráfego pago e conteúdo</title>
+<meta name="description" content="Portfólio de Samuel Roger Cezário: tráfego pago no Meta e no Google, vídeos para marcas, sites e gestão de perfis em Brasília.">
+<meta property="og:title" content="Samuel Roger Cezário · Tráfego pago e conteúdo">
+<meta property="og:description" content="Vídeos, sites, perfis e resultados de tráfego pago. Brasília – DF.">
+<meta property="og:image" content="img/og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#09090a;--bg2:#111113;--bg3:#18181b;--tx:#ececec;--mu:#8b8b92;--li:#26262b;--ac:#d6b98a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font-family:Inter,system-ui,sans-serif;font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+.serif{font-family:'Instrument Serif',serif;font-weight:400}
+.it{font-style:italic;color:var(--ac)}
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:20;backdrop-filter:blur(14px);background:rgba(9,9,10,.72);border-bottom:1px solid rgba(255,255,255,.05)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:62px}
+.logo{font-family:'Instrument Serif',serif;font-size:22px;letter-spacing:.3px}
+.logo span{color:var(--ac)}
+nav ul{display:flex;gap:30px;list-style:none;font-size:13px;color:var(--mu)}
+nav ul a:hover{color:var(--tx)}
+.btn{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;padding:11px 20px;border-radius:999px;border:1px solid var(--li);transition:.25s}
+.btn:hover{border-color:var(--ac);color:var(--ac)}
+.btn.cheio{background:var(--tx);color:#000;border-color:var(--tx)}
+.btn.cheio:hover{background:var(--ac);border-color:var(--ac);color:#000}
+/* hero */
+.hero{min-height:100vh;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding-top:90px}
+.tag{font-size:12px;letter-spacing:2.4px;text-transform:uppercase;color:var(--mu);margin-bottom:26px;display:flex;align-items:center;gap:12px}
+.tag::before{content:"";width:28px;height:1px;background:var(--ac)}
+h1{font-size:clamp(44px,6.2vw,86px);line-height:.98;letter-spacing:-1.5px}
+.hero p.sub{margin-top:28px;font-size:17px;color:#b9b9bf;max-width:470px}
+.hero .ctas{margin-top:38px;display:flex;gap:12px;flex-wrap:wrap}
+.reel{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;transform:rotate(-4deg);height:640px;overflow:hidden;mask-image:linear-gradient(transparent,#000 14%,#000 86%,transparent)}
+.col{display:flex;flex-direction:column;gap:12px;animation:sobe 38s linear infinite}
+.col:nth-child(2){animation-duration:46s;animation-direction:reverse}
+.col:nth-child(3){animation-duration:42s}
+.col img{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:14px;opacity:.9}
+@keyframes sobe{to{transform:translateY(-50%)}}
+/* seções */
+section{padding:120px 0;border-top:1px solid rgba(255,255,255,.05)}
+.cab{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:56px;flex-wrap:wrap}
+.cab h2{font-size:clamp(34px,4.4vw,56px);line-height:1.02;letter-spacing:-.8px}
+.cab p{color:var(--mu);max-width:420px;font-size:15px}
+.num{font-size:12px;color:var(--ac);letter-spacing:2px;margin-bottom:14px;display:block}
+/* números */
+.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--li);border:1px solid var(--li);border-radius:18px;overflow:hidden}
+.nums div{background:var(--bg);padding:34px 28px 30px}
+.nums strong{display:block;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(34px,3.6vw,48px);line-height:1;letter-spacing:-.5px}
+.nums strong em{font-style:normal;color:var(--mu);font-size:.6em}
+.nums strong.sm{font-size:clamp(28px,2.6vw,36px);white-space:nowrap}
+.nums span{display:block;margin-top:14px;font-size:14px;color:#c4c4ca}
+.nums small{display:block;margin-top:10px;font-size:11.5px;color:var(--mu);line-height:1.45}
+/* vídeos */
+.filtros{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
+.filtros button{background:none;border:1px solid var(--li);color:var(--mu);font:inherit;font-size:13px;padding:8px 16px;border-radius:999px;cursor:pointer;transition:.2s}
+.filtros button.on,.filtros button:hover{color:var(--tx);border-color:var(--tx)}
+.grade{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.vid{position:relative;border-radius:16px;overflow:hidden;background:var(--bg3);cursor:pointer;aspect-ratio:9/16}
+.vid video,.vid img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s,opacity .4s}
+.vid video{opacity:0}
+.vid.tocando video{opacity:1}
+.vid:hover img,.vid:hover video{transform:scale(1.03)}
+.vid .info{position:absolute;left:0;right:0;bottom:0;padding:44px 16px 15px;background:linear-gradient(transparent,rgba(0,0,0,.88))}
+.vid .info b{display:block;font-weight:500;font-size:14px;line-height:1.3}
+.vid .info i{font-style:normal;font-size:12px;color:#b4b4ba}
+.vid .play{position:absolute;top:14px;right:14px;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.14);backdrop-filter:blur(8px);display:grid;place-items:center}
+.vid .play::after{content:"";border-left:9px solid #fff;border-top:6px solid transparent;border-bottom:6px solid transparent;margin-left:2px}
+.vid.oculto{display:none}
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;padding:20px}
+.lb.on{display:flex}
+.lb video{max-height:88vh;max-width:min(92vw,520px);border-radius:14px;background:#000}
+.lb .fechar{position:absolute;top:18px;right:22px;font-size:30px;color:#fff;background:none;border:0;cursor:pointer;line-height:1}
+.lb .leg{position:absolute;bottom:18px;left:0;right:0;text-align:center;font-size:13px;color:#bbb;padding:0 20px}
+/* sites */
+.sites{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.site{border:1px solid var(--li);border-radius:18px;overflow:hidden;background:var(--bg2);transition:.3s;display:flex;flex-direction:column}
+.site:hover{border-color:#3a3a40;transform:translateY(-3px)}
+.site .tela{aspect-ratio:16/10;overflow:hidden;border-bottom:1px solid var(--li)}
+.site .tela img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform 1.2s}
+.site:hover .tela img{transform:scale(1.04)}
+.site .txt{padding:22px 24px 24px;display:flex;flex-direction:column;gap:8px;flex:1}
+.site .txt h3{font-weight:500;font-size:18px;display:flex;justify-content:space-between;gap:12px}
+.site .txt h3 small{font-size:12px;color:var(--ac);font-weight:400;white-space:nowrap}
+.site .txt p{font-size:14px;color:var(--mu)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.chips span{font-size:11.5px;color:#c9c9ce;border:1px solid var(--li);border-radius:999px;padding:3px 10px}
+/* perfis */
+.perfis{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--li);border:1px solid var(--li);border-radius:18px;overflow:hidden}
+.perfil{background:var(--bg);padding:26px 24px}
+.perfil a{font-weight:500;font-size:15px}
+.perfil a:hover{color:var(--ac)}
+.perfil span{display:block;font-size:12px;color:var(--ac);margin-top:4px}
+.perfil p{font-size:13.5px;color:var(--mu);margin-top:10px}
+.views{display:grid;grid-template-columns:1.1fr repeat(3,1fr);gap:16px;margin-top:22px}
+.views .t{border:1px solid var(--li);border-radius:18px;padding:28px;display:flex;flex-direction:column;justify-content:space-between;background:var(--bg2)}
+.views .t h3{font-family:'Instrument Serif',serif;font-weight:400;font-size:30px;line-height:1.08}
+.views .t p{font-size:13.5px;color:var(--mu);margin-top:14px}
+.views figure{border-radius:16px;overflow:hidden;aspect-ratio:9/16;position:relative;background:var(--bg3)}
+.views figure img{width:100%;height:100%;object-fit:cover}
+.views figcaption{position:absolute;left:12px;bottom:12px;font-size:12px;background:rgba(0,0,0,.65);backdrop-filter:blur(6px);padding:5px 10px;border-radius:999px}
+/* método */
+.passos{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.passo{border-top:1px solid var(--li);padding-top:22px}
+.passo b{font-family:'Instrument Serif',serif;font-weight:400;font-size:26px;display:block;margin-bottom:10px}
+.passo b i{color:var(--ac);font-size:16px;margin-right:8px;font-style:normal;font-family:Inter}
+.passo p{font-size:14px;color:var(--mu)}
+/* contato */
+.contato{text-align:center;padding:150px 0 120px}
+.contato h2{font-size:clamp(40px,6vw,78px);line-height:1;letter-spacing:-1px}
+.contato p{color:var(--mu);margin:22px auto 40px;max-width:480px}
+.contato .ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+footer{border-top:1px solid rgba(255,255,255,.05);padding:28px 0;font-size:12px;color:var(--mu)}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+/* reveal */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .9s,transform .9s}
+.rv.vis{opacity:1;transform:none}
+@media(max-width:960px){
+ nav ul{display:none}
+ .wrap.hero{grid-template-columns:1fr;min-height:auto;padding-top:116px;padding-bottom:60px}
+ .reel{height:420px;transform:rotate(-3deg)}
+ .nums{grid-template-columns:repeat(2,1fr)}
+ .grade{grid-template-columns:repeat(2,1fr);gap:10px}
+ .sites{grid-template-columns:1fr}
+ .perfis{grid-template-columns:1fr 1fr}
+ .views{grid-template-columns:1fr 1fr}
+ .views .t{grid-column:1/-1}
+ .passos{grid-template-columns:1fr 1fr}
+ section{padding:84px 0}
+}
+@media(max-width:560px){
+ .wrap{padding:0 16px}
+ .perfis,.passos{grid-template-columns:1fr}
+ .nums div{padding:24px 18px}
+}
+@media(prefers-reduced-motion:reduce){.col{animation:none}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a href="#" class="logo">Samuel <span>Cezário</span></a>
+  <ul><li><a href="#videos">Vídeos</a></li><li><a href="#resultados">Resultados</a></li><li><a href="#sites">Sites</a></li><li><a href="#perfis">Perfis</a></li><li><a href="#metodo">Método</a></li></ul>
+  <a class="btn" href="#contato">Falar comigo</a>
+</div></nav>
+
+<header class="wrap hero">
+  <div>
+    <div class="tag">Brasília – DF · desde 2023</div>
+    <h1 class="serif">Tráfego pago e conteúdo que <span class="it">viram cliente.</span></h1>
+    <p class="sub">Sou Samuel Roger Cezário. Cuido de Meta Ads e Google Ads e faço o que roda dentro deles: o vídeo, a página e a medição. Abaixo está o trabalho mais recente, para marcas de móveis de alto padrão, arquitetura, saúde e construção.</p>
+    <div class="ctas">
+      <a class="btn cheio" href="#videos">Ver os vídeos</a>
+      <a class="btn" href="https://wa.me/5561996377057" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+  <div class="reel" aria-hidden="true">
+    <div class="col">
+      <img src="v/casa-caju.jpg" alt=""><img src="v/agulha.jpg" alt=""><img src="v/techiyah.jpg" alt=""><img src="v/cv-60dias.jpg" alt="">
+      <img src="v/casa-caju.jpg" alt=""><img src="v/agulha.jpg" alt=""><img src="v/techiyah.jpg" alt=""><img src="v/cv-60dias.jpg" alt="">
+    </div>
+    <div class="col">
+      <img src="v/casa-cleide.jpg" alt=""><img src="v/loft-carbon.jpg" alt=""><img src="v/tosse.jpg" alt=""><img src="v/aposta.jpg" alt="">
+      <img src="v/casa-cleide.jpg" alt=""><img src="v/loft-carbon.jpg" alt=""><img src="v/tosse.jpg" alt=""><img src="v/aposta.jpg" alt="">
+    </div>
+    <div class="col">
+      <img src="v/hein.jpg" alt=""><img src="v/arte.jpg" alt=""><img src="v/cv-contrato.jpg" alt=""><img src="img/kaio-226.jpg" alt="">
+      <img src="v/hein.jpg" alt=""><img src="v/arte.jpg" alt=""><img src="v/cv-contrato.jpg" alt=""><img src="img/kaio-226.jpg" alt="">
+    </div>
+  </div>
+</header>
+
+<section id="videos"><div class="wrap">
+  <div class="cab rv">
+    <div><span class="num">01 · VÍDEOS</span><h2 class="serif">Filmes, obra real e <span class="it">conhecimento</span></h2></div>
+    <p>Do roteiro à edição, com som, legenda e motion. Todos publicados nos perfis dos clientes. Passe o mouse para ver a prévia e clique para assistir com som.</p>
+  </div>
+  <div class="filtros rv">
+    <button class="on" data-f="todos">Todos</button>
+    <button data-f="filme">Filmes de marca</button>
+    <button data-f="obra">Obra real e depoimento</button>
+    <button data-f="conhecimento">Conhecimento</button>
+    <button data-f="3d">3D e motion</button>
+  </div>
+  <div class="grade">
+    <div class="vid rv" data-f="filme" data-v="casa-caju"><img src="v/casa-caju.jpg" alt="Filme Casa Caju"><div class="play"></div><div class="info"><b>Casa Caju · CASACOR 2026</b><i>Evviva Brasília · filme de marca</i></div></div>
+    <div class="vid rv" data-f="obra" data-v="casa-cleide"><img src="v/casa-cleide.jpg" alt="Casa da Cleide"><div class="play"></div><div class="info"><b>A porta que tirava espaço da cozinha</b><i>Alessandra Moussa · obra real</i></div></div>
+    <div class="vid rv" data-f="conhecimento" data-v="agulha"><img src="v/agulha.jpg" alt="Medo de agulha"><div class="play"></div><div class="info"><b>Medo de agulha?</b><i>Intensive Pilates · gravado na clínica</i></div></div>
+    <div class="vid rv" data-f="filme" data-v="techiyah"><img src="v/techiyah.jpg" alt="Casa Techiyah"><div class="play"></div><div class="info"><b>Casa Techiyah</b><i>Alessandra Moussa · trailer do projeto</i></div></div>
+    <div class="vid rv" data-f="filme" data-v="loft-carbon"><img src="v/loft-carbon.jpg" alt="Loft Carbon"><div class="play"></div><div class="info"><b>Loft Carbon · CASACOR 2026</b><i>Evviva Brasília · filme de marca</i></div></div>
+    <div class="vid rv" data-f="obra" data-v="cv-60dias"><img src="v/cv-60dias.jpg" alt="Projeto e obra em 60 dias"><div class="play"></div><div class="info"><b>Projeto e obra em 60 dias</b><i>Casa Vestida · arquitetura</i></div></div>
+    <div class="vid rv" data-f="conhecimento" data-v="tosse"><img src="v/tosse.jpg" alt="O truque da tosse"><div class="play"></div><div class="info"><b>O truque da tosse</b><i>Intensive Pilates · motion</i></div></div>
+    <div class="vid rv" data-f="filme" data-v="hein"><img src="v/hein.jpg" alt="Casa Hein"><div class="play"></div><div class="info"><b>Casa Hein</b><i>Alessandra Moussa · trailer do projeto</i></div></div>
+    <div class="vid rv" data-f="conhecimento" data-v="arte"><img src="v/arte.jpg" alt="Por que fechar a obra com esquadria de alumínio"><div class="play"></div><div class="info"><b>Por que fechar a obra com alumínio?</b><i>Arte do Seu Jeito · anúncio</i></div></div>
+    <div class="vid rv" data-f="obra" data-v="cv-contrato"><img src="v/cv-contrato.jpg" alt="Além do contrato"><div class="play"></div><div class="info"><b>Além do contrato</b><i>Casa Vestida · arquitetura</i></div></div>
+    <div class="vid rv" data-f="3d" data-v="aposta"><img src="v/aposta.jpg" alt="A Aposta"><div class="play"></div><div class="info"><b>A Aposta · Parte 1</b><i>Série de obra · texto 3D na cena</i></div></div>
+    <div class="vid rv" data-f="3d" data-v="cozinha"><img src="v/cozinha.jpg" alt="Cozinha 3D"><div class="play"></div><div class="info"><b>Cozinha em 3D</b><i>Evviva Brasília · animação do site</i></div></div>
+  </div>
+</div></section>
+
+<section id="resultados"><div class="wrap">
+  <div class="cab rv">
+    <div><span class="num">02 · RESULTADOS</span><h2 class="serif">Números de <span class="it">contas reais</span></h2></div>
+    <p>Lidos nos gerenciadores do Meta e do Google e nos perfis. Cada número tem período e conta.</p>
+  </div>
+  <div class="nums rv">
+    <div><strong class="sm">R$ 15,56 <em>→</em> R$ 5,10</strong><span>custo por conversa no WhatsApp</span><small>Meta Ads · clínica de fisioterapia e pilates · agosto → outubro de 2026</small></div>
+    <div><strong>64</strong><span>contatos pelo Google Ads em um mês, a R$ 7,76 cada</span><small>Rede de Pesquisa · mesma clínica · outubro de 2026</small></div>
+    <div><strong class="sm">R$ 0,61 <em>→</em> R$ 0,18</strong><span>custo por visita ao perfil</span><small>Meta Ads · loja de esquadrias, com o vídeo de conhecimento acima · 2026</small></div>
+    <div><strong>226 mil</strong><span>visualizações em um Reel</span><small>@construtor.kaio · perfil de engenheiro que gerenciei (2023–2025)</small></div>
+  </div>
+</div></section>
+
+<section id="sites"><div class="wrap">
+  <div class="cab rv">
+    <div><span class="num">03 · SITES</span><h2 class="serif">Sites que <span class="it">trabalham</span> para o anúncio</h2></div>
+    <p>Feitos em código (Next.js e Vercel), medidos com GA4 e Clarity e pensados para levar o visitante ao WhatsApp.</p>
+  </div>
+  <div class="sites">
+    <a class="site rv" href="https://www.evvivabrasilia.com.br" target="_blank" rel="noopener"><div class="tela"><img src="img/site-evviva.jpg" alt="Site Evviva Brasília"></div><div class="txt"><h3>Evviva Brasília <small>evvivabrasilia.com.br ↗</small></h3><p>Migração do WordPress para Next.js, com animação 3D da cozinha, calculadora de orçamento, páginas por região e blog com 50 matérias.</p><div class="chips"><span>Next.js</span><span>3D</span><span>SEO local</span><span>GA4 · Clarity</span></div></div></a>
+    <a class="site rv" href="https://intensivefisiopilates.com.br" target="_blank" rel="noopener"><div class="tela"><img src="img/site-intensive.jpg" alt="Site Intensive Pilates"></div><div class="txt"><h3>Intensive Pilates <small>intensivefisiopilates.com.br ↗</small></h3><p>Site da clínica com landing page por especialidade para o Google Ads, página de links da bio e um blog com mais de 300 posts.</p><div class="chips"><span>Next.js</span><span>Landing pages</span><span>SEO</span><span>GA4 · Clarity</span></div></div></a>
+    <a class="site rv" href="https://doutormarmore.com.br" target="_blank" rel="noopener"><div class="tela"><img src="img/site-doutor.jpg" alt="Site Doutor Mármore e Granitos"></div><div class="txt"><h3>Doutor Mármore e Granitos <small>doutormarmore.com.br ↗</small></h3><p>Site da marmoraria com acervo de 72 pedras, páginas de bairro e o configurador "Monte sua peça", onde o cliente monta a peça em 3D e o pedido chega no WhatsApp.</p><div class="chips"><span>Configurador 3D</span><span>Blog de SEO</span><span>Lead no WhatsApp</span></div></div></a>
+    <a class="site rv" href="https://ateliedamaga.com.br" target="_blank" rel="noopener"><div class="tela"><img src="img/site-maga.jpg" alt="Site Ateliê da Maga"></div><div class="txt"><h3>Ateliê da Maga <small>ateliedamaga.com.br ↗</small></h3><p>Rebranding e site de uma costureira: o cliente manda a foto do vestido, monta o modelo no site e conversa direto no WhatsApp.</p><div class="chips"><span>Montador de vestido</span><span>Blog</span><span>Search Console</span></div></div></a>
+    <a class="site rv" href="https://construtorajardins.com.br" target="_blank" rel="noopener"><div class="tela"><img src="img/site-jardins.jpg" alt="Site Construtora Jardins"></div><div class="txt"><h3>Residencial Jardins <small>construtorajardins.com.br ↗</small></h3><p>Site de lançamento imobiliário com tour 3D em 360°, simulador de parcela e atendimento automático no WhatsApp.</p><div class="chips"><span>Tour 3D</span><span>Simulador</span><span>Robô de WhatsApp</span></div></div></a>
+    <a class="site rv" href="https://fhtechdf.com.br" target="_blank" rel="noopener"><div class="tela"><img src="img/site-fhtech.jpg" alt="Site FHTECH"></div><div class="txt"><h3>FHTECH <small>fhtechdf.com.br ↗</small></h3><p>Site e loja de peças de uma reformadora de caminhões, com blog de SEO para quem procura o serviço no Google.</p><div class="chips"><span>Site</span><span>Loja</span><span>Blog</span></div></div></a>
+  </div>
+</div></section>
+
+<section id="perfis"><div class="wrap">
+  <div class="cab rv">
+    <div><span class="num">04 · PERFIS</span><h2 class="serif">Perfis que <span class="it">conduzi</span></h2></div>
+    <p>Conteúdo, legenda, publicação e anúncio de cada um, com o cliente aprovando antes de ir ao ar.</p>
+  </div>
+  <div class="perfis rv">
+    <div class="perfil"><a href="https://instagram.com/evviva.brasilia" target="_blank" rel="noopener">@evviva.brasilia ↗</a><span>móveis planejados de alto padrão</span><p>Filmes de marca, Reels, cobertura de eventos, Meta Ads e Google Ads.</p></div>
+    <div class="perfil"><a href="https://instagram.com/intensivefisioterapiaepilates" target="_blank" rel="noopener">@intensivefisioterapiaepilates ↗</a><span>fisioterapia e pilates</span><p>Dois Reels por semana, capas, Google Ads e Meta Ads, relatório semanal.</p></div>
+    <div class="perfil"><a href="https://instagram.com/alessandraamoussa" target="_blank" rel="noopener">@alessandraamoussa ↗</a><span>engenharia e casas de alto padrão</span><p>Filmes de obra, trailers de projeto, carrosséis e campanha de seguidores.</p></div>
+    <div class="perfil"><a href="https://instagram.com/casavestida.arquitetura" target="_blank" rel="noopener">@casavestida.arquitetura ↗</a><span>arquitetura</span><p>Reels com a arquiteta, destaques e o livro da marca.</p></div>
+    <div class="perfil"><a href="https://instagram.com/construtor.kaio" target="_blank" rel="noopener">@construtor.kaio ↗</a><span>engenheiro · 26,6 mil seguidores</span><p>Marca pessoal do dono da construtora: roteiro, captação e edição (2023–2025).</p></div>
+    <div class="perfil"><a href="https://instagram.com/construcoesqueiroz" target="_blank" rel="noopener">@construcoesqueiroz ↗</a><span>construtora · 10,1 mil seguidores</span><p>Conteúdo de obra, posicionamento de alto padrão e tráfego (2023–2025).</p></div>
+  </div>
+  <div class="views">
+    <div class="t rv"><h3>Reels que passaram de <span class="it">100 mil</span> visualizações</h3><p>Prints dos próprios perfis: conteúdo de obra que explica, em linguagem simples, o que o cliente quer saber antes de construir.</p></div>
+    <figure class="rv"><img src="img/kaio-226.jpg" alt="Reel com 226 mil visualizações"><figcaption>226 mil · @construtor.kaio</figcaption></figure>
+    <figure class="rv"><img src="img/kaio-182.jpg" alt="Reel com 182 mil visualizações"><figcaption>182 mil · @construtor.kaio</figcaption></figure>
+    <figure class="rv"><img src="img/queiroz-129.jpg" alt="Reel com 129 mil visualizações"><figcaption>129 mil · @construcoesqueiroz</figcaption></figure>
+  </div>
+</div></section>
+
+<section id="metodo"><div class="wrap">
+  <div class="cab rv">
+    <div><span class="num">05 · MÉTODO</span><h2 class="serif">Como eu <span class="it">trabalho</span></h2></div>
+  </div>
+  <div class="passos">
+    <div class="passo rv"><b><i>01</i>Estrutura</b><p>Campanha separada por objetivo: conversa no WhatsApp, seguidor ou pesquisa no Google. Público por renda, região e idade.</p></div>
+    <div class="passo rv"><b><i>02</i>Criativo</b><p>Roteiro com gancho nos primeiros segundos, gravação com celular e lapela, edição com som e legenda.</p></div>
+    <div class="passo rv"><b><i>03</i>Medição</b><p>GA4 e Clarity no site, leitura diária das contas e o criativo trocado pelo que o número mostra.</p></div>
+    <div class="passo rv"><b><i>04</i>Relatório</b><p>Toda semana, o que entrou, quanto custou e o que muda, explicado sem jargão.</p></div>
+  </div>
+</div></section>
+
+<section class="contato" id="contato"><div class="wrap rv">
+  <span class="num">06 · CONTATO</span>
+  <h2 class="serif">Vamos <span class="it">conversar?</span></h2>
+  <p>Aberto a vagas CLT ou PJ de tráfego pago, social media e marketing digital. Moro no Entorno do DF e atendo presencial, híbrido ou remoto.</p>
+  <div class="ctas">
+    <a class="btn cheio" href="https://wa.me/5561996377057" target="_blank" rel="noopener">WhatsApp (61) 99637-7057</a>
+    <a class="btn" href="mailto:samuel.roger.cezario@gmail.com">samuel.roger.cezario@gmail.com</a>
+    <a class="btn" href="https://www.linkedin.com/in/samuelrogercezario" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><span>Samuel Roger Cezário · Brasília – DF</span><span>Os vídeos, sites e perfis pertencem às marcas citadas e estão aqui como portfólio.</span></div></footer>
+
+<div class="lb" id="lb"><button class="fechar" aria-label="Fechar">×</button><video id="lbv" controls playsinline></video><div class="leg" id="lbl"></div></div>
+
+<script>
+const grade=document.querySelectorAll('.vid');
+const hover=matchMedia('(hover:hover)').matches;
+grade.forEach(el=>{
+  const n=el.dataset.v;
+  if(hover){
+    let v=null;
+    el.addEventListener('mouseenter',()=>{
+      if(!v){v=document.createElement('video');v.src='v/'+n+'.mp4';v.muted=true;v.loop=true;v.playsInline=true;v.preload='none';el.insertBefore(v,el.querySelector('.play'))}
+      v.currentTime=0;v.play().then(()=>el.classList.add('tocando')).catch(()=>{});
+    });
+    el.addEventListener('mouseleave',()=>{if(v){v.pause();el.classList.remove('tocando')}});
+  }
+  el.addEventListener('click',()=>{
+    const lb=document.getElementById('lb'),lv=document.getElementById('lbv');
+    lv.src='v/'+n+'.mp4';lv.poster='v/'+n+'.jpg';
+    document.getElementById('lbl').textContent=el.querySelector('b').textContent+' · '+el.querySelector('i').textContent;
+    lb.classList.add('on');lv.play().catch(()=>{});
+  });
+});
+function fechar(){const lb=document.getElementById('lb'),lv=document.getElementById('lbv');lv.pause();lv.removeAttribute('src');lv.load();lb.classList.remove('on')}
+document.querySelector('.lb .fechar').onclick=fechar;
+document.getElementById('lb').addEventListener('click',e=>{if(e.target.id==='lb')fechar()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')fechar()});
+document.querySelectorAll('.filtros button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.filtros button').forEach(x=>x.classList.remove('on'));b.classList.add('on');
+  const f=b.dataset.f;grade.forEach(el=>el.classList.toggle('oculto',f!=='todos'&&el.dataset.f!==f));
+});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
